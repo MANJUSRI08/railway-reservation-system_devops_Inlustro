@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Reservation System - Check Ticket Availability</title>
+</head>
+<body>
+  <h1>Check Ticket Availability</h1>
+  <form id="checkAvailabilityForm">
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" required><br><br>
+    
+    <label for="date">Date:</label>
+    <input type="date" id="date" required><br><br>
+    
+    <button type="submit">Check Availability</button>
+  </form>
+
+  <script>
+    document.getElementById('checkAvailabilityForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent form submission
+      var destination = document.getElementById('destination').value;
+      var date = document.getElementById('date').value;
+
+      // Here, you can add your ticket availability check logic
+      // For demonstration purposes, let's assume tickets are available
+      var isAvailable = true;
+
+      if (isAvailable) {
+        alert('Tickets are available for ' + destination + ' on ' + date);
+      } else {
+        alert('Sorry, tickets are not available for ' + destination + ' on ' + date);
+      }
+      
+      // Redirect to home page after checking availability
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>

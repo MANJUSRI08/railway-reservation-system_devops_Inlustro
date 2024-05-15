@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Reservation System - Cancel Ticket</title>
+</head>
+<body>
+  <h1>Cancel Ticket</h1>
+  <form id="cancelTicketForm">
+    <label for="ticketNumber">Ticket Number:</label>
+    <input type="text" id="ticketNumber" required><br><br>
+    
+    <button type="submit">Cancel Ticket</button>
+  </form>
+
+  <script>
+    document.getElementById('cancelTicketForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent form submission
+      var ticketNumber = document.getElementById('ticketNumber').value;
+
+      // Here, you can add your cancel ticket logic
+      // For demonstration purposes, let's assume the ticket is cancelled successfully
+      var isCancelled = true;
+
+      if (isCancelled) {
+        alert('Ticket with number ' + ticketNumber + ' has been cancelled successfully');
+      } else {
+        alert('Failed to cancel ticket with number ' + ticketNumber);
+      }
+      
+      // Redirect to home page after cancelling ticket
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>
